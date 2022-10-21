@@ -1,14 +1,8 @@
 .mainDiv {
     display: flex;
-    flex-flow: column;
-    text-align:  center;
-  //  border: outset;
+    justify-content: center;
+    // border: 1px solid black;
 }
-.fundooDiv{
+.innerDiv {
     display: flex;
-    flex-flow: column; 
 }
-.inputeTag{
-
-}
-
