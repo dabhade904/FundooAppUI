@@ -1,6 +1,6 @@
-<div class="mainDiv">
-    <div>
-        <div class="innerDiv">
+<div fxLayout="column" fxLayoutAlign="space-between center" class="mainDiv">
+    <div fxLayout="column" fxLayoutAlign="space-around" class="innerDiv">
+        <div fxLayout="row" fxLayoutAlign="center center" class="innerDiv">
             <h1>
                 <span style="color: blue;">F</span>
                 <span style="color: red;">u</span>
@@ -10,27 +10,30 @@
                 <span style="color: blue;">o</span>
             </h1>
         </div>
-        <div class="innerDiv">
-            <h1>Sign In</h1>
+        <div fxLayout="row" fxLayoutAlign="center center">
+            <h1 class="h1-section-signIn">Sign In</h1>
         </div>
-        <div class="innerDiv">
-            <h1>Use your Fundoo Account</h1>
+        <div fxLayout="row" fxLayoutAlign="center center">
+            <h1 class="h1-section-account">Use your Fundoo Account</h1>
         </div>
-        <div>
-            <mat-form-field appearance="outline">
-                <mat-label>UserName</mat-label>
-                <input matInput placeholder="UserName" type="email">
+        <div fxLayout="column" fxLayoutAlign="center center" class="xyz">
+            <mat-form-field appearance="outline" style="width:135%">
+                <mat-label>Username</mat-label>
+                <input matInput placeholder="" type="email">
             </mat-form-field>
-
+            <mat-form-field appearance="outline" style="width:135%">
+                <mat-label>Password</mat-label>
+                <input matInput placeholder="" type="email">
+            </mat-form-field>
         </div>
-        <a href="#" class="linkProperty">Forget email?</a>
+        <a href="#" class="linkProperty" style="">Forget email?</a>
         <div>
-            <p class="textParagraph">Not your computer? Use a Private Window to sign in. </p>
+            <p class="section-paragraph">Not your computer? Use a Private Window to sign in. </p>
             <a href="#" class="linkProperty">Learn more </a>
         </div>
-        <div class="btnPropety">
-            <button mat-button color="primary">Sign in instead</button>
-            <button mat-button color="primary">Next</button>
+        <div fxLayout="row" fxLayoutAlign="space-between end" class="btn-layout">
+            <button mat-button color="primary" class="btn-property">Create Account</button>
+            <button mat-raised-button class="btn-create">Next</button>
         </div>
     </div>
 </div>

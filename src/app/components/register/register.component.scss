@@ -1,8 +1,107 @@
 .mainDiv {
-    display: flex;
-    justify-content: center;
-    // border: 1px solid black;
+    padding: 0px 0px 0px 40px;
+    border: 1px solid rgb(220, 213, 213);
+    border-radius: 8px;
+    margin-top: 2.5%;
+    margin-left: 27%;
+    height: 90%;
+    position: absolute;
+    border: 0.5px solid rgb(222, 214, 214);
 }
+
 .innerDiv {
-    display: flex;
+    display: block;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.myAccount {
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 1.2rem;
+    text-transform: none;
+    text-decoration: none;
+    color: var(--gm-colortextbutton-ink-color, #1a73e8);
+}
+
+a:hover {
+    color: var(--gm-colortextbutton-ink-color, #1a73e8);
+    background-color: rgb(232, 239, 242);
+    transition: 0.8s;
+}
+
+.account {
+    color: #202124;
+    padding-bottom: 0;
+    padding-top: 0px;
+    font-family: "Google Sans", "Noto Sans Myanmar UI", arial, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.3333;
+    margin-bottom: 0;
+    margin-top: 0;
+    word-break: break-word;
+}
+
+.btn-layout {
+    margin-top: 10%;
+}
+
+.textPass {
+    margin-top: -20px;
+    padding-left: 10px;
+    font-size: 14px;
+    white-space: normal;
+}
+
+.innerDiv mat-hint {
+    padding-left: 10px;
+    font-size: 14px;
+    white-space: normal;
+}
+
+.example-section {
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: inherit;
+    color: #202124;
+    font-size: 17px;
+    margin-left: 4px;
+    white-space: normal;
+    margin-top: 20px;
+    font-weight: normal;
+}
+
+.passward-indicator-text {
+    margin-top: -20PX;
+}
+
+.btn-instead {
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 1rem;
+    color: var(--gm-colortextbutton-ink-color, #1a73e8);
+    margin-left: -10px;
+}
+
+.btn-create {
+    background-color: var(--gm-colortextbutton-ink-color, #1a73e8);
+    color: white;
+    margin-right: -4px;
+    border: none;
+    padding: 0px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer
+}
+
+.section-pre {
+    color: #202124;
+    font-family: roboto, arial, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+    color: #202124;
+    font-family: roboto, "Noto Sans Myanmar UI", arial, sans-serif;
 }

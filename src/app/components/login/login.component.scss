@@ -1,22 +1,95 @@
 .mainDiv {
-    display: flex;
-    justify-content: center;
-    margin-top: 7%;
-    // border: 1px solid black;
+    padding: 30px 0px 0px 0px;
+    border: 1px solid rgb(220, 213, 213);
+    border-radius: 8px;
+    margin-top: 6%;
+    margin-left: 35%;
+    text-align: center;
+    height: 80%;
+    width: 30%;
+    position: absolute;
+    border: 0.5px solid rgb(222, 214, 214);
 }
+
 .innerDiv {
-    display: flex;
-    justify-content: center ;
+    display: block;
+    text-align: justify;
 }
-.btnPropety{
-    display:  flex;
-    justify-content: space-between;
+
+.h1-section-account {
+    color: #202124;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.1px;
+    line-height: 1.5;
+    margin-top: -6px;
+    text-align: center;
 }
-.textParagraph{
-    color: rgb(109, 104, 104);
+
+.h1-section-signIn {
+    color: #202124;
+    font-size: 24px;
+    font-family: "Google Sans", "Noto Sans Myanmar UI", arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.3333;
+    word-break: break-word;
 }
-.linkProperty{
-    text-decoration-line: none;
-    color:rgb(63, 63, 174);
-    font-size: 19px;
+
+.linkProperty {
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 1.1rem;
+    text-transform: none;
+    text-decoration: none;
+    margin-top: -10px;
+    margin-left: -29px;
+    color: var(--gm-colortextbutton-ink-color, #1a73e8);
+}
+
+.textParagraph {
+    margin-top: 50PX;
+    margin-left: -28px;
+}
+
+.xyz {
+    color: #202124;
+    font-size: 16px;
+    margin: 1px 1px 0 1px;
+    padding: 13px 15px;
+    z-index: 1;
+}
+
+.section-paragraph {
+    margin-top: 40px;
+    white-space: normal;
+    padding-bottom: 3px;
+    padding-top: 9px;
+    color: #5f6368;
+    font-size: 14px;
+    line-height: 1.4286;
+    margin-left: -29px;
+    font-family: roboto, "Noto Sans Myanmar UI", arial, sans-serif;
+}
+
+.btn-property {
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 1rem;
+    color: var(--gm-colortextbutton-ink-color, #1a73e8);
+    margin-left: -44px;
+}
+
+.btn-layout {
+    margin-top: 10%;
+}
+
+.btn-create {
+    background-color: var(--gm-colortextbutton-ink-color, #1a73e8);
+    color: white;
+    margin-right: -35px;
+    border: none;
+    padding: 1px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer
 }
