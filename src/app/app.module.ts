@@ -11,12 +11,14 @@ import { LoginComponent } from './components/login/login.component';
 import {MatInputModule} from '@angular/material/input'; 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatButtonModule} from '@angular/material/button';
+import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
     LoginComponent,
     ForgetPasswordComponent,
+    ResetPasswordComponent,
   ],
   imports: [
     BrowserModule,
