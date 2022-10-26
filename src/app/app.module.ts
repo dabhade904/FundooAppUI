@@ -12,6 +12,7 @@ import {MatInputModule} from '@angular/material/input';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatButtonModule} from '@angular/material/button';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ResetPasswordComponent } from './components/reset-password/reset-passwo
     MatCheckboxModule,
     MatInputModule,
     FlexLayoutModule,
-    MatButtonModule
+    MatButtonModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
