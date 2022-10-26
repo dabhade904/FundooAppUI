@@ -1,39 +1,45 @@
-<div fxLayout="column" fxLayoutAlign="space-between center" class="mainDiv">
-    <div fxLayout="column" fxLayoutAlign="space-around" class="innerDiv">
-        <div fxLayout="row" fxLayoutAlign="center center" class="innerDiv">
-            <h1>
-                <span style="color: blue;">F</span>
-                <span style="color: red;">u</span>
-                <span style="color: yellow;">n</span>
-                <span style="color: green;">d</span>
-                <span style="color: red;">o</span>
-                <span style="color: blue;">o</span>
-            </h1>
-        </div>
-        <div fxLayout="row" fxLayoutAlign="center center">
-            <h1 class="h1-section-signIn">Sign In</h1>
-        </div>
-        <div fxLayout="row" fxLayoutAlign="center center">
-            <h1 class="h1-section-account">Use your Fundoo Account</h1>
-        </div>
-        <div fxLayout="column" fxLayoutAlign="center center" class="xyz">
-            <mat-form-field appearance="outline" style="width:135%">
-                <mat-label>Username</mat-label>
-                <input matInput placeholder="" type="email">
-            </mat-form-field>
-            <mat-form-field appearance="outline" style="width:135%">
-                <mat-label>Password</mat-label>
-                <input matInput placeholder="" type="email">
-            </mat-form-field>
-        </div>
-        <a href="#" class="linkProperty" style="" routerLink="/forgetpassword">Forget Password?</a>
-        <div>
-            <p class="section-paragraph">Not your computer? Use a Private Window to sign in. </p>
-            <a href="#" class="linkProperty">Learn more </a>
-        </div>
-        <div fxLayout="row" fxLayoutAlign="space-between end" class="btn-layout">
-            <button mat-button color="primary" class="btn-property"routerLink="/registration">Create Account</button>
-            <button mat-raised-button class="btn-create"routerLink="/home">Next</button>
+<form [formGroup]="login" (ngSubmit)="onSubmit()">
+    <div fxLayout="column" fxLayoutAlign="space-between center" class="mainDiv">
+        <div fxLayout="column" fxLayoutAlign="space-around" class="innerDiv">
+            <div fxLayout="row" fxLayoutAlign="center center" class="innerDiv">
+                <h1>
+                    <span style="color: blue;">F</span>
+                    <span style="color: red;">u</span>
+                    <span style="color: yellow;">n</span>
+                    <span style="color: green;">d</span>
+                    <span style="color: red;">o</span>
+                    <span style="color: blue;">o</span>
+                </h1>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="center center">
+                <h1 class="h1-section-signIn">Sign In</h1>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="center center">
+                <h1 class="h1-section-account">Use your Fundoo Account</h1>
+            </div>
+            <div fxLayout="column" fxLayoutAlign="center center" class="xyz">
+                <mat-form-field appearance="outline" style="width:135%">
+                    <mat-label>Username</mat-label>
+                    <input matInput placeholder="" type="email" formControlName="username">
+                    <mat-error>Username is required</mat-error>
+
+                </mat-form-field>
+                <mat-form-field appearance="outline" style="width:135%">
+                    <mat-label>Password</mat-label>
+                    <input matInput placeholder="password" formControlName="password" type="password">
+                    <mat-error>Password is required</mat-error>
+                </mat-form-field>
+            </div>
+            <a href="#" class="linkProperty" routerLink="/forgetpassword">Forget Password?</a>
+            <div>
+                <p class="section-paragraph">Not your computer? Use a Private Window to sign in. </p>
+                <a href="#" class="linkProperty">Learn more </a>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="space-between end" class="btn-layout">
+                <button mat-button color="primary" class="btn-property" routerLink="/registration">Create
+                    Account</button>
+                <button mat-raised-button class="btn-create" routerLink="/home">Next</button>
+            </div>
         </div>
     </div>
-</div>
+</form>
