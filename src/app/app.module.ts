@@ -12,6 +12,7 @@ import {MatInputModule} from '@angular/material/input';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatButtonModule} from '@angular/material/button';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
+
 @NgModule({
   declarations: [
     AppComponent,
