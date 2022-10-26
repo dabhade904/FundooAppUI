@@ -28,8 +28,4 @@ export class LoginComponent implements OnInit {
     }
     alert('Success\n\n' + JSON.stringify(this.login.value, null, 4))
   }
-  onReset() {
-    this.submitted = false;
-    this.login.reset();
-  }
 }

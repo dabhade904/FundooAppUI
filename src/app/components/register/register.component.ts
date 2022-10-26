@@ -30,9 +30,5 @@ export class RegisterComponent implements OnInit {
     }
     alert('Success! \n\n' + JSON.stringify(this.registerForm.value, null, 4));
   }
-  onReset() {
-    this.submitted = false;
-    this.registerForm.reset();
-  }
 }
 
