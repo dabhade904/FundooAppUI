@@ -26,14 +26,14 @@
                 <input matInput placeholder="" type="email">
             </mat-form-field>
         </div>
-        <a href="#" class="linkProperty" style="">Forget Password?</a>
+        <a href="#" class="linkProperty" style="" routerLink="/forgetpassword">Forget Password?</a>
         <div>
             <p class="section-paragraph">Not your computer? Use a Private Window to sign in. </p>
             <a href="#" class="linkProperty">Learn more </a>
         </div>
         <div fxLayout="row" fxLayoutAlign="space-between end" class="btn-layout">
-            <button mat-button color="primary" class="btn-property">Create Account</button>
-            <button mat-raised-button class="btn-create">Next</button>
+            <button mat-button color="primary" class="btn-property"routerLink="/registration">Create Account</button>
+            <button mat-raised-button class="btn-create"routerLink="/home">Next</button>
         </div>
     </div>
 </div>
