@@ -4,15 +4,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {RegisterComponent} from './components/register/register.component';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component'; 
+import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
+import { LoginComponent } from './components/login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatFormFieldModule} from '@angular/material/form-field'; 
 import {MatCheckboxModule} from '@angular/material/checkbox';
-import { LoginComponent } from './components/login/login.component';
 import {MatInputModule} from '@angular/material/input'; 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatButtonModule} from '@angular/material/button';
-import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatInputModule,
     FlexLayoutModule,
     MatButtonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
