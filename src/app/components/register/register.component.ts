@@ -24,7 +24,6 @@ export class RegisterComponent implements OnInit {
   onSubmit() {
     this.submitted = true;
     if (this.registerForm.valid) {
-      console.log("valid data", this.registerForm.value);
       console.log("do api call");
       let data = {
         firstName: this.registerForm.value.firstName,

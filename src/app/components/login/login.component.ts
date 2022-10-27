@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UserServiceService } from 'src/app/services/userService/user-service.service';
 
 @Component({
   selector: 'app-login',
@@ -10,22 +11,28 @@ export class LoginComponent implements OnInit {
   login !: FormGroup;
   submitted = false;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private user: UserServiceService) { }
 
   ngOnInit() {
     this.login = this.formBuilder.group({
-      username: ['', Validators.required],
+      emailId: ['', Validators.required],
       password: ['', [Validators.required, Validators.minLength(8)]]
     })
   }
-  get f() {
-    return this.login.controls
-  }
   onSubmit() {
     this.submitted = true;
-    if (this.login.invalid) {
-      return;
+    if (this.login.valid) {
+      console.log("do api call");
+      let data = {
+        emailId: this.login.value.emailId,
+        password: this.login.value.password
+      }
+      this.user.login(data).subscribe((Response: any) => {
+        console.log(Response);
+      })
+    } else {
+      console.log("Invalid data", this.login.value);
+      console.log("no api call");
     }
-    alert('Success\n\n' + JSON.stringify(this.login.value, null, 4))
   }
 }
