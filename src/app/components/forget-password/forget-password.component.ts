@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UserServiceService } from 'src/app/services/userService/user-service.service';
 
 @Component({
   selector: 'app-forget-password',
@@ -9,21 +10,26 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class ForgetPasswordComponent implements OnInit {
   forgetPasswordForm!: FormGroup;
   submitted = false;
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private user: UserServiceService) { }
 
   ngOnInit() {
     this.forgetPasswordForm = this.formBuilder.group({
-      emailIdValidater: ['', Validators.required]
+      emailId: ['', Validators.required]
     })
   }
-  get f() {
-    return this.forgetPasswordForm.controls
-  }
+
   onSubmit() {
     this.submitted = false;
-    if (this.forgetPasswordForm.invalid) {
-      return;
+    if (this.forgetPasswordForm.valid) {
+      console.log("Do Api Call")
+      let data = {
+        emailId: this.forgetPasswordForm.value.emailId
+      }
+      this.user.forgetPassword(data).subscribe((Response: any) => {
+        console.log(Response);
+      })
+    } else {
+      console.log("No Api Call")
     }
-    alert('Success! \n\n' + JSON.stringify(this.forgetPasswordForm.value, null, 4));
   }
 }
