@@ -1,9 +1,31 @@
 <div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
-    <mat-toolbar color="" class="example-toolbar">
-        <button mat-icon-button (click)="snav.toggle()">
-            <mat-icon>menu</mat-icon>
-        </button>
-        <h1 class="example-app-name">Fundoo</h1>
+    <mat-toolbar color="" class="example-toolbar" style=" ">
+        <div fxLayout="row" fxLayoutAlign="space-between center" class="innerDiv">
+            <button mat-icon-button (click)="snav.toggle()">
+                <img src="../../../assets/menu.png" alt="" class="menu-img">
+            </button>
+            <img src="../../../assets/logoimg.png" alt="" class="img-logo">
+            <h1 class="fundoo-text">
+                <span style="color: blue;">F</span>
+                <span style="color: red;">u</span>
+                <span style="color: yellow;">n</span>
+                <span style="color: green;">d</span>
+                <span style="color: red;">o</span>
+                <span style="color: blue;">o</span>
+            </h1>
+        </div>
+        <div class="searchBar" fxLayout="row" fxLayoutAlign="none end">
+            <mat-icon class="search-icon">search</mat-icon>
+            <input class="search-text" type="text" name="search" type="search" placeholder="Search">
+        </div>
+
+        <div fxLayout="row" fxLayoutAlign="end center" class="img-section">
+            <img src="../../../assets//refresh.svg" alt="" class="img-refresh">
+            <img src="../../../assets//view.svg" alt="" class="img-view">
+            <img src="../../../assets//settings.svg" alt="" class="img-settings">
+            <img src="../../../assets//apps.svg" alt="" class="img-apps">
+            <img src="../../../assets//account.svg" alt="" class="img-account">
+        </div>
     </mat-toolbar>
 
     <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
