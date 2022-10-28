@@ -19,6 +19,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatListModule} from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
+import { CreatenotesComponent } from './components/createnotes/createnotes.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +28,7 @@ import {MatIconModule} from '@angular/material/icon';
     ForgetPasswordComponent,
     ResetPasswordComponent,
     DashboardComponent,
+    CreatenotesComponent,
   ],
   imports: [
     AppRoutingModule,
