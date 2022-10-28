@@ -22,6 +22,7 @@ export class LoginComponent implements OnInit {
   onSubmit() {
     this.submitted = true;
     if (this.login.valid) {
+      
       console.log("do api call");
       let data = {
         emailId: this.login.value.emailId,
