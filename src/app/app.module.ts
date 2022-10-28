@@ -20,6 +20,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatListModule} from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
 import { CreatenotesComponent } from './components/createnotes/createnotes.component';
+import { ArchiveComponent } from './components/archive/archive.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +30,7 @@ import { CreatenotesComponent } from './components/createnotes/createnotes.compo
     ResetPasswordComponent,
     DashboardComponent,
     CreatenotesComponent,
+    ArchiveComponent,
   ],
   imports: [
     AppRoutingModule,
