@@ -7,6 +7,7 @@ import { ForgetPasswordComponent } from './components/forget-password/forget-pas
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
+import { TrashComponent } from './components/trash/trash.component';
 
 const routes: Routes = [
   { path: 'registration', component: RegisterComponent },
@@ -16,8 +17,9 @@ const routes: Routes = [
   {
     path: 'dashboard', component: DashboardComponent,
     children: [
-      {path :'createnotes',component:CreatenotesComponent},
-      {path :'archivenotes',component:ArchiveComponent},
+      {path :'createNotes',component:CreatenotesComponent},
+      {path :'archiveNotes',component:ArchiveComponent},
+      {path :'trashNotes',component:TrashComponent},
     ]
   }
 ];

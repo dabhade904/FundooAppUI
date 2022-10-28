@@ -21,6 +21,7 @@ import {MatListModule} from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
 import { CreatenotesComponent } from './components/createnotes/createnotes.component';
 import { ArchiveComponent } from './components/archive/archive.component';
+import { TrashComponent } from './components/trash/trash.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +32,7 @@ import { ArchiveComponent } from './components/archive/archive.component';
     DashboardComponent,
     CreatenotesComponent,
     ArchiveComponent,
+    TrashComponent,
   ],
   imports: [
     AppRoutingModule,
