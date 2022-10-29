@@ -1,0 +1,44 @@
+.main-div {
+    width: 600px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 0px 1px 5px 1px #aaaaaa;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.note-section {
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    resize: none;
+    font-weight: bold;
+    letter-spacing: .00625em;
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+}
+
+.note-section-main {
+    height: auto;
+    padding: 10px 15px;
+    font-size: medium;
+}
+
+.btn-close {
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, .87);
+    overflow: hidden;
+    white-space: nowrap;
+    letter-spacing: .01785714em;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    height: 36px;
+    border-radius: 4px;
+    margin-right: 30px;
+    margin-bottom: 10px;
+    width: 15%;
+}
