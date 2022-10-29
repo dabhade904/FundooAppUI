@@ -22,6 +22,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { CreatenotesComponent } from './components/createnotes/createnotes.component';
 import { ArchiveComponent } from './components/archive/archive.component';
 import { TrashComponent } from './components/trash/trash.component';
+import { IconsComponent } from './components/icons/icons.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,6 +34,7 @@ import { TrashComponent } from './components/trash/trash.component';
     CreatenotesComponent,
     ArchiveComponent,
     TrashComponent,
+    IconsComponent,
   ],
   imports: [
     AppRoutingModule,
