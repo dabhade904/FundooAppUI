@@ -1,0 +1,45 @@
+.main-div {
+    margin-top: 50px;
+
+}
+
+.main-div mat-card {
+    width: 82vh;
+    height: auto;
+}
+
+.expansion-header {
+    text-decoration: center;
+}
+
+.note-section {
+    border: none;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+    resize: none;
+    font-weight: bold;
+    letter-spacing: .00625em;
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    text-decoration: center;
+    padding-top: 5px;
+    margin-top: -10px;
+}
+
+.btn-close {
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, .87);
+    overflow: hidden;
+    white-space: nowrap;
+    letter-spacing: .01785714em;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    border-radius: 4px;
+    width: 15%;
+    height: 35px;
+}
