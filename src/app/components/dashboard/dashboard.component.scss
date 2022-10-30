@@ -69,17 +69,18 @@ h1.example-app-name {
   box-shadow: 0px 4px rgb(245, 240, 240);
 
 }
-.searchBar{
-  background-color:white;
+
+.searchBar {
+  background-color: white;
 
 }
+
 .search-text {
   width: 100%;
   height: 100%;
   margin-left: 8%;
   white-space: normal;
-  opacity: 1; 
-  // font-size: 15px;
+  opacity: 1;
   border: 0px solid;
   outline: none;
 }
@@ -90,7 +91,6 @@ input::placeholder {
 }
 
 .search-icon {
-  // margin-Top: 8px;
   position: absolute;
   height: 33px;
   margin-left: 15px;
@@ -98,16 +98,8 @@ input::placeholder {
   padding: 2px;
 }
 
-// .search-icon:hover {
-//   background-color: rgb(232, 241, 243);
-//   border-radius: 20px;
-//   padding: 7px;
-
-// }
-
 .img-section {
   margin-left: 50vh;
-
 }
 
 .img-refresh {
@@ -157,9 +149,16 @@ input::placeholder {
   cursor: pointer;
 }
 
-.menu-img:hover{
+.menu-img:hover {
   background-color: rgb(236, 231, 231);
   border-radius: 30px;
   padding: 10px;
 }
 
+::ng-deep .mat-tooltip {
+  background-color: rgb(84, 74, 74);
+  width: 7vh;
+  font-size: 14px;
+  text-align: center;
+  font-weight: 400;
+}

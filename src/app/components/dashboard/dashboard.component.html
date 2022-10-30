@@ -2,7 +2,7 @@
     <mat-toolbar color="" class="example-toolbar" style=" ">
         <div fxLayout="row" fxLayoutAlign="space-between center" class="innerDiv">
             <button mat-icon-button (click)="snav.toggle()">
-                <img src="../../../assets/menu.png" alt="" class="menu-img">
+                <img src="../../../assets/menu.png" alt="" class="menu-img" matTooltip="Main menu">
             </button>
             <img src="../../../assets/logoimg.png" alt="" class="img-logo">
             <h1 class="fundoo-text">
@@ -15,19 +15,17 @@
             </h1>
         </div>
         <div class="searchBar" fxLayout="row" fxLayoutAlign="none end">
-            <mat-icon class="search-icon">search</mat-icon>
+            <mat-icon class="search-icon" matTooltip="Search">search</mat-icon>
             <input class="search-text" type="text" name="search" type="search" placeholder="Search">
         </div>
-
         <div fxLayout="row" fxLayoutAlign="end center" class="img-section">
-            <img src="../../../assets//refresh.svg" alt="" class="img-refresh">
-            <img src="../../../assets//view.svg" alt="" class="img-view">
-            <img src="../../../assets//settings.svg" alt="" class="img-settings">
-            <img src="../../../assets//apps.svg" alt="" class="img-apps">
-            <img src="../../../assets//account.svg" alt="" class="img-account">
+            <img src="../../../assets//refresh.svg" alt="" class="img-refresh" matTooltip="Refresh">
+            <img src="../../../assets//view.svg" alt="" class="img-view" matTooltip="List view">
+            <img src="../../../assets//settings.svg" alt="" class="img-settings" matTooltip="Settings">
+            <img src="../../../assets//apps.svg" alt="" class="img-apps" matTooltip="Google Apps">
+            <img src="../../../assets//account.svg" alt="" class="img-account" matTooltip="Google Account">
         </div>
     </mat-toolbar>
-
     <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
         <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
             fixedTopGap="56">
@@ -39,7 +37,6 @@
                 <a mat-list-item routerLink="/dashboard/trashNotes">Trash</a>
             </mat-nav-list>
         </mat-sidenav>
-
         <mat-sidenav-content>
             <router-outlet></router-outlet>
         </mat-sidenav-content>
