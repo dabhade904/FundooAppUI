@@ -3,7 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { ArchiveComponent } from './components/archive/archive.component';
 import { CreatenotesComponent } from './components/createnotes/createnotes.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { DisplaynotesComponent } from './components/displaynotes/displaynotes.component';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
+import { GetNotesComponent } from './components/get-notes/get-notes.component';
 import { IconsComponent } from './components/icons/icons.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
@@ -18,14 +20,16 @@ const routes: Routes = [
   {
     path: 'dashboard', component: DashboardComponent,
     children: [
-      {path :'createNotes',component:CreatenotesComponent},
-      {path :'archiveNotes',component:ArchiveComponent},
-      {path :'trashNotes',component:TrashComponent},
+      { path: 'getnotes', component: GetNotesComponent },
+      { path: 'archiveNotes', component: ArchiveComponent },
+      { path: 'trashNotes', component: TrashComponent },
     ]
   },
-  { path : 'icons',component:IconsComponent}
+  { path: 'icons', component: IconsComponent },
+  { path: 'createnotes', component: CreatenotesComponent },
+  { path: 'displaynotes', component :DisplaynotesComponent }
 ];
- 
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

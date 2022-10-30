@@ -12,19 +12,19 @@ export class ResetPasswordComponent implements OnInit {
   constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
-    this.resetPasswordForm=this.formBuilder.group({
-      password:['', [Validators.required, Validators.minLength(8)]],
-      confirmPassword:['', [Validators.required, Validators.minLength(8)]],
+    this.resetPasswordForm = this.formBuilder.group({
+      password: ['', [Validators.required, Validators.minLength(8)]],
+      confirmPassword: ['', [Validators.required, Validators.minLength(8)]],
     })
   }
-  get f(){
+  get f() {
     return this.resetPasswordForm.controls
   }
-  onSubmit(){
-    this.submitted=false;
-    if(this.resetPasswordForm.invalid){
+  onSubmit() {
+    this.submitted = false;
+    if (this.resetPasswordForm.invalid) {
       return;
     }
-    alert('Success \n\n' +JSON.stringify(this.resetPasswordForm.value,null,4));
+    alert('Success \n\n' + JSON.stringify(this.resetPasswordForm.value, null, 4));
   }
 }

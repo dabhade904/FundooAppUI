@@ -24,6 +24,11 @@ import { ArchiveComponent } from './components/archive/archive.component';
 import { TrashComponent } from './components/trash/trash.component';
 import { IconsComponent } from './components/icons/icons.component';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { DisplaynotesComponent } from './components/displaynotes/displaynotes.component';
+import { GetNotesComponent } from './components/get-notes/get-notes.component';
+import { DialogBoxComponent } from './components/dialog-box/dialog-box.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import {MatCardModule} from '@angular/material/card'; 
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,6 +41,9 @@ import { MatExpansionModule } from '@angular/material/expansion';
     ArchiveComponent,
     TrashComponent,
     IconsComponent,
+    DisplaynotesComponent,
+    GetNotesComponent,
+    DialogBoxComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -50,7 +58,9 @@ import { MatExpansionModule } from '@angular/material/expansion';
     MatToolbarModule,
     MatListModule,
     MatButtonModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatDialogModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
