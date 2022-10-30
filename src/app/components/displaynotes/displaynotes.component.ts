@@ -10,7 +10,8 @@ export class DisplaynotesComponent {
 
   constructor(public dialog: MatDialog) { }
 
-  openDialog(){
+  openDialog() {
     this.dialog.open(DialogBoxComponent)
   }
+
 }
