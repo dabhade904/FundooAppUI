@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./createnotes.component.scss']
 })
 export class CreatenotesComponent implements OnInit {
-
+  panelOpenState = false;
   constructor() { }
 
   ngOnInit(): void {
