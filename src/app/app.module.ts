@@ -29,6 +29,7 @@ import { GetNotesComponent } from './components/get-notes/get-notes.component';
 import { DialogBoxComponent } from './components/dialog-box/dialog-box.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import {MatCardModule} from '@angular/material/card'; 
+import {MatTooltipModule} from '@angular/material/tooltip'; 
 @NgModule({
   declarations: [
     AppComponent,
@@ -60,7 +61,7 @@ import {MatCardModule} from '@angular/material/card';
     MatButtonModule,
     MatExpansionModule,
     MatDialogModule,
-    MatCardModule
+    MatCardModule,MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -7,7 +7,6 @@ import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-
   mobileQuery: MediaQueryList;
   private _mobileQueryListener: () => void;
 
