@@ -25,7 +25,7 @@ const routes: Routes = [
   },
   { path : 'icons',component:IconsComponent}
 ];
-
+ 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
