@@ -20,4 +20,15 @@ export class NoteService {
     }
     return this.httpService.postService('https://localhost:44308/api/Note/Notes', data, true, header)
   }
+
+  getNotes() {
+    console.log(this.tokan);
+    let header = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization': 'Bearer ' + this.tokan
+      })
+    }
+    return this.httpService.getService('https://localhost:44308/api/Note/GetNotes', true, header)
+  }
 }
