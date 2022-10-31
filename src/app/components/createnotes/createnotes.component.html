@@ -5,7 +5,8 @@
                 <textarea name="text" id="text" class="note-section" placeholder="Title"></textarea>
             </mat-expansion-panel-header>
             <textarea name="text" id="text" class="note-section" placeholder="Take a note..."></textarea>
-            <div fxLayout="row" fxLayoutAlign="end end">
+            <div fxLayout="row" fxLayoutAlign="space-between end">
+                <app-icons></app-icons>
                 <button mat-button class="btn-close"(click)="nextStep()">Close</button>
             </div>
         </mat-expansion-panel>
