@@ -26,8 +26,6 @@ import { IconsComponent } from './components/icons/icons.component';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { DisplaynotesComponent } from './components/displaynotes/displaynotes.component';
 import { GetNotesComponent } from './components/get-notes/get-notes.component';
-import { DialogBoxComponent } from './components/dialog-box/dialog-box.component';
-import { MatDialogModule } from '@angular/material/dialog';
 import {MatCardModule} from '@angular/material/card'; 
 import {MatTooltipModule} from '@angular/material/tooltip'; 
 @NgModule({
@@ -44,8 +42,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     IconsComponent,
     DisplaynotesComponent,
     GetNotesComponent,
-    DialogBoxComponent,
-  ],
+    ],
   imports: [
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -60,7 +57,6 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     MatListModule,
     MatButtonModule,
     MatExpansionModule,
-    MatDialogModule,
     MatCardModule,MatTooltipModule
   ],
   providers: [],
