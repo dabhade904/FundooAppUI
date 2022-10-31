@@ -10,9 +10,7 @@ import { UserServiceService } from 'src/app/services/userService/user-service.se
 export class LoginComponent implements OnInit {
   login !: FormGroup;
   submitted = false;
-
   constructor(private formBuilder: FormBuilder, private user: UserServiceService) { }
-
   ngOnInit() {
     this.login = this.formBuilder.group({
       emailId: ['', Validators.required],
@@ -22,14 +20,14 @@ export class LoginComponent implements OnInit {
   onSubmit() {
     this.submitted = true;
     if (this.login.valid) {
-      
       console.log("do api call");
       let data = {
         emailId: this.login.value.emailId,
         password: this.login.value.password
       }
       this.user.login(data).subscribe((Response: any) => {
-        console.log(Response);
+        console.log('responce :=>', Response.tokan);
+        localStorage.setItem('tokan', Response.tokan)
       })
     } else {
       console.log("Invalid data", this.login.value);
