@@ -1,14 +1,18 @@
-<div fxLayout="row" fxLayoutAlign="center start" class="main-div">
-    <mat-accordion>
-        <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
-            <mat-expansion-panel-header style="background-color: white;" class="expansion-header">
-                <textarea name="text" id="text" class="note-section" placeholder="Title"></textarea>
-            </mat-expansion-panel-header>
-            <textarea name="text" id="text" class="note-section" placeholder="Take a note..."></textarea>
-            <div fxLayout="row" fxLayoutAlign="space-between end">
-                <app-icons></app-icons>
-                <button mat-button class="btn-close"(click)="nextStep()">Close</button>
-            </div>
-        </mat-expansion-panel>
-    </mat-accordion>
-</div>
+<form action="" [formGroup]="createNote" (ngSubmit)="onSubmit()">
+    <div fxLayout="row" fxLayoutAlign="center start" class="main-div">
+        <mat-accordion>
+            <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+                <mat-expansion-panel-header style="background-color: white;" class="expansion-header">
+                    <textarea name="text" id="text" class="note-section" placeholder="Title"
+                        formControlName="title"></textarea>
+                </mat-expansion-panel-header>
+                <textarea name="text" id="text" class="note-section" placeholder="Take a note..."
+                    formControlName="discription"></textarea>
+                <div fxLayout="row" fxLayoutAlign="space-between end">
+                    <app-icons></app-icons>
+                    <button mat-button class="btn-close" (click)="nextStep()">Close</button>
+                </div>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+</form>
