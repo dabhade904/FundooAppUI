@@ -32,12 +32,16 @@ export class CreatenotesComponent implements OnInit {
       this.note.addNotes(data).subscribe((Response:any)=>{
         console.log(Response);
       })
+      this.resetForm();
     }else{
       console.log("Invalid Data",this.createNote.value);
       console.log("no api call")
     }
   }
   
+  resetForm() {
+    this.createNote.reset();
+  }
   step = 0;
   setStep(index: number) {
     this.step = index;

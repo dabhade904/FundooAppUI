@@ -28,8 +28,12 @@ export class ForgetPasswordComponent implements OnInit {
       this.user.forgetPassword(data).subscribe((Response: any) => {
         console.log(Response);
       })
+      this.resetForm();
     } else {
       console.log("No Api Call")
     }
+  }
+  resetForm() {
+    this.forgetPasswordForm.reset();
   }
 }

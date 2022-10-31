@@ -25,6 +25,11 @@ export class ResetPasswordComponent implements OnInit {
     if (this.resetPasswordForm.invalid) {
       return;
     }
+    this.resetForm();
     alert('Success \n\n' + JSON.stringify(this.resetPasswordForm.value, null, 4));
+  }
+
+  resetForm() {
+    this.resetPasswordForm.reset();
   }
 }

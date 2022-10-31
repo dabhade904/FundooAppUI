@@ -37,10 +37,14 @@ export class RegisterComponent implements OnInit {
       this.user.register(data).subscribe((Response: any) => {
         console.log(Response);
       })
+      this.resetForm();
     }
     else {
       console.log("invalid data", this.registerForm.value);
       console.log("no api call");
     }
+  }
+  resetForm() {
+    this.registerForm.reset();
   }
 }
