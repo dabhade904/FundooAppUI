@@ -29,10 +29,10 @@ export class CreatenotesComponent implements OnInit {
         title: this.createNote.value.title,
         discription: this.createNote.value.discription,
       }
-      this.note.addNotes(data).subscribe((Response:any)=>{
-        console.log(Response);
+      this.note.addNotes(data).subscribe((response:any)=>{
+        console.log(response);
       })
-      this.resetForm();
+     // this.resetForm();
     }else{
       console.log("Invalid Data",this.createNote.value);
       console.log("no api call")
