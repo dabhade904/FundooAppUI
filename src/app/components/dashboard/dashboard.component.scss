@@ -54,28 +54,32 @@ h1.example-app-name {
 
 }
 
-.search-text:hover {
-  background-color: white;
-}
-
 .searchBar {
   text-align: center;
   margin-left: 5%;
   width: 40%;
   height: 50px;
   border-radius: 10px;
-  background-color: rgb(233, 239, 242);
   border: 1px solid rgba(211, 206, 206, 0.862);
   box-shadow: 0px 4px rgb(245, 240, 240);
+  background-color: rgba(244, 244, 248, 0.726);
+}
+
+.searchBar img {
+  position: absolute;
+  height: 30px;
+  margin-left: 15px;
+  text-align: center;
+  margin-bottom: 5px;
 
 }
 
-.searchBar {
-  background-color: white;
-
+.searchBar img:hover {
+  background-color: rgb(236, 231, 231);
+  border-radius: 80px;
 }
 
-.search-text {
+.searchBar input {
   width: 100%;
   height: 100%;
   margin-left: 8%;
@@ -83,20 +87,20 @@ h1.example-app-name {
   opacity: 1;
   border: 0px solid;
   outline: none;
+  border-radius: 10px;
+  font-size: 1em;
+  border-radius: 10px;
+  background-color: rgba(244, 244, 248, 0.726);
 }
 
-input::placeholder {
-  color: rgb(116, 113, 113);
-  font-size: 1.2em;
+.searchBar input:hover {
+  background-color: white;
 }
 
-.search-icon {
-  position: absolute;
-  height: 33px;
-  margin-left: 15px;
-  text-align: center;
-  padding: 2px;
+.searchBar:hover {
+  background-color: white;
 }
+
 
 .img-section {
   margin-left: 50vh;
@@ -111,7 +115,7 @@ input::placeholder {
 .img-section img:hover {
   background-color: rgb(236, 231, 231);
   border-radius: 30px;
-  padding: 10px;
+  // padding: 10px;
 }
 
 .img-view {
@@ -152,7 +156,7 @@ input::placeholder {
 .menu-img:hover {
   background-color: rgb(236, 231, 231);
   border-radius: 30px;
-  padding: 10px;
+  // padding: 10px;
 }
 
 ::ng-deep .mat-tooltip {
@@ -167,12 +171,13 @@ input::placeholder {
   border-radius: 0px 30px 30px 0px;
   letter-spacing: .01785714em;
   font-family: "Google Sans", Roboto, Arial, sans-serif;
-  font-size:1rem;
+  font-size: 1rem;
   font-weight: 500;
   line-height: 1.25rem;
 }
-  .sidebar-logo img {
-    width: 28px;
-    margin-right: 40px;
 
-  }
+.sidebar-logo img {
+  width: 28px;
+  margin-right: 40px;
+
+}
