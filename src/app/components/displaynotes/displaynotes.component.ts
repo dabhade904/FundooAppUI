@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { NoteService } from 'src/app/services/noteService/note.service';
 @Component({
@@ -7,11 +7,7 @@ import { NoteService } from 'src/app/services/noteService/note.service';
   styleUrls: ['./displaynotes.component.scss']
 })
 export class DisplaynotesComponent {
-  notes:any;
-  constructor(private note: NoteService) { }
+  @Input() childMessage:any;
   ngOnInit() {
-    // this.note.getAllNotes().subscribe(data=>{
-    //   this.notes.data;
-    // })
   }
 }

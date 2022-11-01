@@ -1,7 +1,12 @@
 .main-div {
-    margin-top: 50px;
-    margin-left: 5vh;
-    width: 40vh;
+    margin-left: 100px;
+}
+
+.main-div mat-card {
+    max-width: 21%;
+    margin-left: 2px;
+    margin-top: 30px;
+    margin-right: 12px;
 }
 
 .note-section {

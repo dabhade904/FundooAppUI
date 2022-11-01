@@ -7,7 +7,7 @@ import { NoteService } from 'src/app/services/noteService/note.service';
   styleUrls: ['./get-notes.component.scss']
 })
 export class GetNotesComponent implements OnInit {
-  getNotes: any;
+  noteArray: any;
 
   constructor(private note:NoteService) { }
 
@@ -16,13 +16,12 @@ export class GetNotesComponent implements OnInit {
   }
   getAllNote() {
     this.note.getNotes().subscribe((response: any) => {
-      console.log(response);
-      this.getNotes = response.getNotes
+      console.log(response.data);
+      this.noteArray = response.data;
     })
   }
   receiveMessage(e: any) {
-    this.getNotes()
-    console.log(e)
+    console.log(e);
+    this.getAllNote();
   }
-
 }

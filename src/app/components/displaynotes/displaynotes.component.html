@@ -1,7 +1,8 @@
-<div mat-button fxLayout="row" fxLayoutAlign="start center" class="main-div">
-    <mat-card>
-        <textarea name="text" id="text" class="note-section" placeholder="Title"></textarea>
-        <textarea name="text" id="text" class="note-section" placeholder="Take a note..."></textarea>
+<div fxLayout="row wrap" fxLayoutAlign=""  class="main-div"style="width:auto">
+    <mat-card *ngFor="let note of childMessage" style="">
+        <textarea name="text" id="text" class="note-section" placeholder="Title">{{note.title}}</textarea>
+        <textarea name="text" id="text" class="note-section"
+            placeholder="Take a note...">{{note.discription}}</textarea>
         <div fxLayout="row" fxLayoutAlign="space-between end">
             <app-icons></app-icons>
         </div>
