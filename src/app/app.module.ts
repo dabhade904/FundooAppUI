@@ -27,7 +27,9 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { DisplaynotesComponent } from './components/displaynotes/displaynotes.component';
 import { GetNotesComponent } from './components/get-notes/get-notes.component';
 import {MatCardModule} from '@angular/material/card'; 
-import {MatTooltipModule} from '@angular/material/tooltip'; 
+import {MatTooltipModule} from '@angular/material/tooltip';
+import { UpdateComponent } from './components/update/update.component'; 
+import { MatDialogModule } from '@angular/material/dialog';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,6 +44,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     IconsComponent,
     DisplaynotesComponent,
     GetNotesComponent,
+    UpdateComponent,
     ],
   imports: [
     AppRoutingModule,
@@ -57,6 +60,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     MatListModule,
     MatButtonModule,
     MatExpansionModule,
+    MatDialogModule,
     MatCardModule,MatTooltipModule
   ],
   providers: [],
