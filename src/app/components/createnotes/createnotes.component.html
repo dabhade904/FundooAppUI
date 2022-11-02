@@ -1,19 +1,19 @@
 <form action="" [formGroup]="createNote" (ngSubmit)="onSubmit()">
-    <div fxLayout="row" fxLayoutAlign="center start" class="main-div">
-        <mat-accordion>
-            <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
-                <mat-expansion-panel-header style="background-color: white;" class="expansion-header">
-                    <textarea name="text" id="text" class="note-section" placeholder="Title"
-                        formControlName="title"></textarea>
-                    <img src="../../../assets/pin.svg" alt="">
-                </mat-expansion-panel-header>
-                <textarea name="text" id="text" class="note-section" placeholder="Take a note..."
-                    formControlName="discription"></textarea>
-                <div fxLayout="row" fxLayoutAlign="space-between end">
-                    <app-icons></app-icons>
-                    <button mat-button class="btn-close" (click)="nextStep()">Close</button>
-                </div>
-            </mat-expansion-panel>
-        </mat-accordion>
+    <div fxLayout="column" fxLayoutAlign="start center" class="main-div">
+        <mat-card>
+            <div fxLayout="row" fxLayoutAlign="none end" *ngIf="show" class="title-section">
+                <input name="text" id="text" class="note-section" placeholder="Title" formControlName="title"
+                    type="text">
+                <img src="../../../assets/pin.svg" alt="">
+            </div>
+            <div *ngIf="show || !show" (click)="isShow()">
+                <input name="text" id="text" class="note-section" placeholder="Take a note..."
+                    formControlName="discription">
+            </div>
+            <div *ngIf="show" fxLayout="row" fxLayoutAlign="space-evently end">
+                <app-icons></app-icons>
+                <button mat-button class="btn-close">Close</button>
+            </div>
+        </mat-card>
     </div>
 </form>
