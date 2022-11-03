@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-// import { NoteService } from 'src/app/services/noteService/note.service';
 import { UpdateComponent } from '../update/update.component';
 @Component({
   selector: 'app-displaynotes',
@@ -8,11 +7,18 @@ import { UpdateComponent } from '../update/update.component';
   styleUrls: ['./displaynotes.component.scss']
 })
 export class DisplaynotesComponent {
-  @Input() childMessage:any;
-  
-  constructor(public dialog:MatDialog) { }
+  @Input() GetNote: any;
+  constructor(private dialog: MatDialog) { }
 
-  openDialog(){
-    this.dialog.open(UpdateComponent)
+  ngOnInit(): void {
   }
+  openDialog(noteArray: any): void {
+    const dialogRef = this.dialog.open(UpdateComponent, {
+      data: noteArray,
+    });
+    dialogRef.afterClosed().subscribe((result: any) => {
+      console.log('The dialog was closed');
+    });
+  }
+
 }

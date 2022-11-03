@@ -7,9 +7,10 @@ import { NoteService } from 'src/app/services/noteService/note.service';
   styleUrls: ['./get-notes.component.scss']
 })
 export class GetNotesComponent implements OnInit {
+  getNotes: any;
   noteArray: any;
 
-  constructor(private note:NoteService) { }
+  constructor(private note: NoteService) { }
 
   ngOnInit(): void {
     this.getAllNote();
@@ -19,9 +20,10 @@ export class GetNotesComponent implements OnInit {
       console.log(response.data);
       this.noteArray = response.data;
     })
+
   }
-  receiveMessage(e: any) {
-    console.log(e);
+  receiveMessage($event: any) {
+    console.log($event);
     this.getAllNote();
   }
 }

@@ -8,6 +8,7 @@ import { NoteService } from 'src/app/services/noteService/note.service';
   styleUrls: ['./createnotes.component.scss']
 })
 export class CreatenotesComponent implements OnInit {
+  show =false;
   createNote!: FormGroup;
   panelOpenState = false;
   submitted = false;
@@ -19,9 +20,12 @@ export class CreatenotesComponent implements OnInit {
       discription: ['', Validators.required]
     });
   }
-
+  isShow(){
+    this.show=true;
+  }
   onSubmit() {
     this.submitted = true;
+    this.show=false;
     if (this.createNote.valid) {
       console.log("valid Data",this.createNote.value);
       console.log("do Api call");

@@ -46,6 +46,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     GetNotesComponent,
     UpdateComponent,
     ],
+
   imports: [
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -60,7 +61,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatListModule,
     MatButtonModule,
     MatExpansionModule,
-    MatDialogModule,
+    MatDialogModule,FormsModule,
     MatCardModule,MatTooltipModule
   ],
   providers: [],

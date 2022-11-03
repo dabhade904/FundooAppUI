@@ -10,8 +10,8 @@ export class HttpService {
   postService(url: string, data: any, token: boolean = false, options: any) {
     return this.httpClient.post(url, data, token && options)
   }
-
-  getService(url: string,  token: boolean = false, options: any) {
+  
+  getService(url: string, token: boolean = false, options: any) {
     return this.httpClient.get(url, token && options)
   }
 }
