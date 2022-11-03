@@ -8,7 +8,7 @@
         <textarea name="text" id="text" class="note-section" placeholder="Take a note..."
             (click)="openDialog(note)">{{note.discription}}</textarea>
         <div fxLayout="row" fxLayoutAlign="space-between end">
-            <app-icons></app-icons>
+            <app-icons [noteCard]="note"></app-icons>
         </div>
     </mat-card>
 </div>

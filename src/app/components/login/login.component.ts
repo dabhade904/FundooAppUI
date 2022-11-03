@@ -29,12 +29,10 @@ export class LoginComponent implements OnInit {
         console.log('responce :=>', Response.tokan);
         localStorage.setItem('tokan', Response.tokan)
       })
-    //  this.resetForm();
     } else {
       console.log("Invalid data", this.login.value);
       console.log("no api call");
     }
-  //  this.resetForm();
   }
 
   resetForm() {
