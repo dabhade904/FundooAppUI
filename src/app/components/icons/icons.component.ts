@@ -22,4 +22,14 @@ export class IconsComponent implements OnInit {
       console.log(Response);
     })
   }
+
+  onClickTrash(){
+    let data = {
+      noteID: [this.noteCard.noteID]
+    }
+    console.log(data);
+    this.note.trashNote(data).subscribe((Response: any) => {
+      console.log(Response);
+    })
+  }
 }

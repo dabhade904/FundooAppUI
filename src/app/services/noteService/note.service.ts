@@ -54,4 +54,15 @@ export class NoteService {
     }
     return this.httpService.putService(`https://localhost:44308/api/Note/ArchiveNote?noteId=${data.noteID}`, data, true, header)
   }
+
+  trashNote(data: any) {
+    console.log(this.tokan);
+    let header = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization': 'Bearer ' + this.tokan
+      })
+    }
+    return this.httpService.putService(`https://localhost:44308/api/Note/TrashNote?noteId=${data.noteID}`, data, true, header)
+  }
 }

@@ -5,6 +5,14 @@
         <img src="../../../assets/palette.svg" matTooltip="Background options">
         <img src="../../../assets/image.svg" matTooltip="Add image">
         <img src="../../../assets/archive.svg" matTooltip="Archive"(click)="onArchiev()">
-        <img src="../../../assets/more.svg" matTooltip="More">
+       <div>
+        <img src="../../../assets/more.svg" matTooltip="More"  [matMenuTriggerFor]="menu">
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="onClickTrash()">Trash</button>
+            <button mat-menu-item>Add Label</button>
+            <button mat-menu-item>Add drawing</button>
+            <button mat-menu-item>Make a copy</button>
+        </mat-menu>
+    </div>
     </div>
 </div>
