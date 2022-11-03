@@ -19,6 +19,9 @@ export class GetNotesComponent implements OnInit {
     this.note.getNotes().subscribe((response: any) => {
       console.log(response.data);
       this.noteArray = response.data;
+      this.noteArray = this.noteArray.filter((a: any) => {
+        return a.archive === false;
+      })
     })
 
   }
