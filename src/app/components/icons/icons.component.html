@@ -1,18 +1,23 @@
 <div fxLayout="row" fxLayourAlign="center">
     <div>
-        <img src="../../../assets/add.svg" matTooltip="Remind me">
-        <img src="../../../assets/person.svg" matTooltip="Collaborator">
-        <img src="../../../assets/palette.svg" matTooltip="Background options">
-        <img src="../../../assets/image.svg" matTooltip="Add image">
-        <img src="../../../assets/archive.svg" matTooltip="Archive"(click)="onArchiev()">
-       <div>
-        <img src="../../../assets/more.svg" matTooltip="More"  [matMenuTriggerFor]="menu">
+        <img *ngIf="!isTrash" src="../../../assets/add.svg" matTooltip="Remind me">
+        <img *ngIf="!isTrash" src="../../../assets/person.svg"matTooltip="Collaborator">
+        <img *ngIf="!isTrash" mat-button src="../../../assets/palette.svg"matTooltip="Background options">
+        <img *ngIf="!isTrash" src="../../../assets/image.svg"matTooltip="Add image"> 
+        <img  *ngIf="!isArchive && !isTrash" (click)="onClickArchive()" src="../../../assets/archive.svg" matTooltip="Archive">
+        <img *ngIf="isArchive && !isTrash" src="../../../assets/unarchive.svg" (click)="onUnArchievenote()"matTooltip="UnArchive">
+    </div>
+    <div>
+        <img *ngIf="!isTrash" [matMenuTriggerFor]="menu" src="../../../assets/more.svg">
         <mat-menu #menu="matMenu">
-            <button mat-menu-item (click)="onClickTrash()">Trash</button>
+            <button mat-menu-item (click)="onClickTrash()">Delete Note</button>
             <button mat-menu-item>Add Label</button>
             <button mat-menu-item>Add drawing</button>
             <button mat-menu-item>Make a copy</button>
         </mat-menu>
     </div>
+    <div *ngIf="isTrash" fxLayout="row" fxLayourAlign="space-between start">
+        <img class="icons" src="../../../assets/delete_forever.svg" matTooltip="Delete forever">
+        <img class="icons" src="../../../assets/restore.svg" (click)="onRestore()" matTooltip="Restore">
     </div>
 </div>
