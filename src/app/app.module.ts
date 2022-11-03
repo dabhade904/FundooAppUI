@@ -30,6 +30,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { UpdateComponent } from './components/update/update.component'; 
 import { MatDialogModule } from '@angular/material/dialog';
+import {MatMenuModule} from '@angular/material/menu'; 
 @NgModule({
   declarations: [
     AppComponent,
@@ -62,7 +63,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatButtonModule,
     MatExpansionModule,
     MatDialogModule,FormsModule,
-    MatCardModule,MatTooltipModule
+    MatCardModule,MatTooltipModule,MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

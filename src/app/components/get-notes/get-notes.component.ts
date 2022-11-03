@@ -22,8 +22,10 @@ export class GetNotesComponent implements OnInit {
       this.noteArray = this.noteArray.filter((a: any) => {
         return a.archive === false;
       })
+      this.noteArray = this.noteArray.filter((a: any) => {
+        return a.trash === false;
+      })
     })
-
   }
   receiveMessage($event: any) {
     console.log($event);
