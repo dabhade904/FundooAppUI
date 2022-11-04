@@ -26,11 +26,12 @@ import { IconsComponent } from './components/icons/icons.component';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { DisplaynotesComponent } from './components/displaynotes/displaynotes.component';
 import { GetNotesComponent } from './components/get-notes/get-notes.component';
-import {MatCardModule} from '@angular/material/card'; 
-import {MatTooltipModule} from '@angular/material/tooltip';
-import { UpdateComponent } from './components/update/update.component'; 
+import { MatCardModule } from '@angular/material/card';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { UpdateComponent } from './components/update/update.component';
 import { MatDialogModule } from '@angular/material/dialog';
-import {MatMenuModule} from '@angular/material/menu'; 
+import { MatMenuModule } from '@angular/material/menu';
+import { AuthguardServiceService } from './services/authguardService/authguard-service.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +47,7 @@ import {MatMenuModule} from '@angular/material/menu';
     DisplaynotesComponent,
     GetNotesComponent,
     UpdateComponent,
-    ],
+  ],
 
   imports: [
     AppRoutingModule,
@@ -62,10 +63,10 @@ import {MatMenuModule} from '@angular/material/menu';
     MatListModule,
     MatButtonModule,
     MatExpansionModule,
-    MatDialogModule,FormsModule,
-    MatCardModule,MatTooltipModule,MatMenuModule
+    MatDialogModule, FormsModule,
+    MatCardModule, MatTooltipModule, MatMenuModule
   ],
-  providers: [],
+  providers: [AuthguardServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

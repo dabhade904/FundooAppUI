@@ -11,14 +11,17 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 import { TrashComponent } from './components/trash/trash.component';
+import { AuthenticationGuard } from './services/authguardService/authentication.guard';
 
 const routes: Routes = [
-  { path: 'registration', component: RegisterComponent },
+  { path: '', redirectTo: "/login", pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
+  { path: 'dashboard', component: DashboardComponent },
+  { path: 'registration', component: RegisterComponent },
   { path: 'forgetpassword', component: ForgetPasswordComponent },
   { path: 'resetpassword', component: ResetPasswordComponent },
   {
-    path: 'dashboard', component: DashboardComponent,
+    path: 'dashboard', component: DashboardComponent,canActivate:[AuthenticationGuard],
     children: [
       { path: 'getnotes', component: GetNotesComponent },
       { path: 'archiveNotes', component: ArchiveComponent },
@@ -27,7 +30,7 @@ const routes: Routes = [
   },
   { path: 'icons', component: IconsComponent },
   { path: 'createnotes', component: CreatenotesComponent },
-  { path: 'displaynotes', component :DisplaynotesComponent }
+  { path: 'displaynotes', component: DisplaynotesComponent }
 ];
 
 @NgModule({

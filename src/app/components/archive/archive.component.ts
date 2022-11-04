@@ -16,12 +16,15 @@ export class ArchiveComponent implements OnInit {
   getAllNote() {
     this.note.getNotes().subscribe((res: any) => {
       console.log(res.data);
-      this.noteArray = res.data
+      this.noteArray = res.data.reverse();
       this.noteArray = this.noteArray.filter((a: any) => {
         return a.archive === true;
       })
       console.log(this.noteArray);
     });
   }
-
+  
+  updatedIcon(event: any) {
+    this.getAllNote();
+  }
 }

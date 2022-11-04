@@ -16,7 +16,7 @@ export class TrashComponent implements OnInit {
   getAllNote() {
     this.note.getNotes().subscribe((res: any) => {
       console.log(res.data);
-      this.trashNote = res.data
+      this.trashNote = res.data.reverse();
       this.trashNote = this.trashNote.filter((a: any) => {
         return a.trash === true;
       })
@@ -24,5 +24,8 @@ export class TrashComponent implements OnInit {
     });
   }
 
+  receiveMessage(event:any){
+    this.getAllNote();
+    }
 }
 
