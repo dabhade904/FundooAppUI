@@ -2,7 +2,17 @@
     <div>
         <img *ngIf="!isTrash" src="../../../assets/add.svg" matTooltip="Remind me">
         <img *ngIf="!isTrash" src="../../../assets/person.svg" matTooltip="Collaborator">
-        <img *ngIf="!isTrash" mat-button src="../../../assets/palette.svg" matTooltip="Background options">
+        <img *ngIf="!isTrash" [matMenuTriggerFor]="color" mat-button src="../../../assets/palette.svg"
+            matTooltip="Background options">
+
+        <mat-menu #color="matMenu" yPosition="below">
+            <div class="rangila">
+                <div *ngFor="let color of colorarray">
+                    <button mat-mini-fab [style.background-color]="color?.Colorcode"
+                        (click)="setColor(color?.Colorcode)"></button>
+                </div>
+            </div>
+        </mat-menu>
         <img *ngIf="!isTrash" src="../../../assets/image.svg" matTooltip="Add image">
         <img *ngIf="!isArchive && !isTrash" (click)="onClickArchive()" src="../../../assets/archive.svg"
             matTooltip="Archive">

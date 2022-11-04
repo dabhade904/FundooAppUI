@@ -38,7 +38,7 @@ export class CreatenotesComponent implements OnInit {
         color:this.createNote.value.color
       }
       this.note.addNotes(data).subscribe((response: any) => {
-        //console.log(response);
+        console.log(response);
         this.messageEvent.emit(response)
       })
       // this.resetForm();

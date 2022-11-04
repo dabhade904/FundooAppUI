@@ -65,4 +65,15 @@ export class NoteService {
     }
     return this.httpService.putService(`https://localhost:44308/api/Note/TrashNote?noteId=${data.noteID}`, data, true, header)
   }
+
+  noteColor(reqdata:any){
+    console.log(this.tokan);
+    let header={
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization':'Bearer '+this.tokan
+      })
+    }
+    return this.httpService.putService(`https://localhost:44308/api/Note/ColorNotes?noteId=${reqdata.noteID}&color=${reqdata.color}`, reqdata, true, header)
+  }
 }

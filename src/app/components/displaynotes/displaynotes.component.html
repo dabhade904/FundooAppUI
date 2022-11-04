@@ -3,11 +3,11 @@
         <mat-card  [style.background]="note.color">
             <div fxLayout="row" fxLayoutAlign="" class="pin-text">
                 <textarea name="text" id="text" class="note-section" placeholder="Title"
-                    (click)="openDialog(note)">{{note.title}}</textarea>
+                    (click)="openDialog(note)"  [style.background]="note.color">{{note.title}}</textarea>
                 <img src="../../../assets/pin.svg" alt="">
             </div>
             <textarea name="text" id="text" class="note-section" placeholder="Take a note..."
-                (click)="openDialog(note)">{{note.discription}}</textarea>
+                (click)="openDialog(note)" [style.background]="note.color">{{note.discription}}</textarea>
             <div fxLayout="row" fxLayoutAlign="space-between end">
                 <app-icons [noteCard]="note"></app-icons>
             </div>
