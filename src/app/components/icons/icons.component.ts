@@ -16,16 +16,19 @@ export class IconsComponent implements OnInit {
   isTrash: boolean = false;
   constructor(private note: NoteService, private activatedroute: ActivatedRoute) { }
 
-  colorarray =[{Colorcode:"rgb(153, 0, 51)"},
-  {Colorcode:"rgb(102, 255, 102)"},
-  {Colorcode:"rgb(51, 102, 204)"},
-  {Colorcode:"rgb(0, 255, 255)"},{Colorcode:"rgb(255, 0, 255)"},
-  {Colorcode:"rgb(255, 51, 0)"},{Colorcode:"rgb(0, 51, 0)"},
-  {Colorcode:"rgb(255, 255, 0)"},{Colorcode:"rgb(255, 140, 26)"},
-  {Colorcode:"rgb(102, 204, 255)"},
-  {Colorcode:"rgb(38,30,238)"},
-  {Colorcode:"rgb(51, 153, 102)"}];
-  NoteListId: any;
+  colorArray =[{colorCode:"rgb(153, 0, 51)"},
+  {colorCode:"rgb(102, 255, 102)"},
+  {colorCode:"rgb(51, 102, 204)"},
+  {colorCode:"rgb(0, 255, 255)"},
+  {colorCode:"rgb(255, 0, 255)"},
+  {colorCode:"rgb(255, 51, 0)"},
+  {colorCode:"rgb(0, 51, 0)"},
+  {colorCode:"rgb(255, 255, 0)"},
+  {colorCode:"rgb(255, 140, 26)"},
+  {colorCode:"rgb(102, 204, 255)"},
+  {colorCode:"rgb(38,30,238)"},
+  {colorCode:"rgb(51, 153, 102)"}];
+  noteListId: any;
   
   ngOnInit(): void {
     let Component = this.activatedroute.snapshot.component;
@@ -76,26 +79,18 @@ export class IconsComponent implements OnInit {
 
     })
   }
-  setColor(color: any) {
-    this.NoteListId = this.noteCard.color = color;
+  applyColor(color: any) {
+    this.noteListId = this.noteCard.color = color;
     let reqData = {
       color: color,
       noteID: [this.noteCard.noteID],      
     };
-
-   console.log(this.NoteListId);
-   
     this.note.noteColor(reqData).subscribe((response: any) => {
       console.log(response);
       this.changeNoteEvent.emit(response);
-
       console.log("color", reqData)
-
     })
-
-  }
- 
-    
+  }   
 }
 
 

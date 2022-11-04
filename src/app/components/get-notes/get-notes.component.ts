@@ -9,9 +9,7 @@ import { NoteService } from 'src/app/services/noteService/note.service';
 export class GetNotesComponent implements OnInit {
   getNotes: any;
   noteArray: any;
-
   constructor(private note: NoteService) { }
-
   ngOnInit(): void {
     this.getAllNote();
   }
@@ -28,7 +26,6 @@ export class GetNotesComponent implements OnInit {
     console.log($event);
     this.getAllNote();
   }
-
   updatedIcon($event: any) {
     console.log($event);
     this.getAllNote();
@@ -41,5 +38,4 @@ export class GetNotesComponent implements OnInit {
     console.log(event);
     this.getAllNote();
   }
-
 }
