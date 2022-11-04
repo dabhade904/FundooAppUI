@@ -67,7 +67,10 @@ export class NoteService {
   }
 
   noteColor(reqdata:any){
+
     console.log(this.tokan);
+    console.log('ttttttttttttttt------>  ',reqdata.noteID);
+    
     let header={
       headers: new HttpHeaders({
         'Content-Type': 'application/json',

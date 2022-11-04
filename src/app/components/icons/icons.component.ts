@@ -80,9 +80,11 @@ export class IconsComponent implements OnInit {
     this.NoteListId = this.noteCard.color = color;
     let reqData = {
       color: color,
-      noteID: [this.noteCard.noteID]
+      noteID: [this.noteCard.noteID],      
     };
 
+   console.log(this.NoteListId);
+   
     this.note.noteColor(reqData).subscribe((response: any) => {
       console.log(response);
       this.changeNoteEvent.emit(response);
@@ -92,6 +94,8 @@ export class IconsComponent implements OnInit {
     })
 
   }
+ 
+    
 }
 
 

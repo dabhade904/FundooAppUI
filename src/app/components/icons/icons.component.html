@@ -21,12 +21,14 @@
     </div>
     <div>
         <img *ngIf="!isTrash" [matMenuTriggerFor]="menu" src="../../../assets/more.svg">
-        <mat-menu #menu="matMenu">
-            <button mat-menu-item (click)="onClickTrash()">Delete Note</button>
-            <button mat-menu-item>Add Label</button>
-            <button mat-menu-item>Add drawing</button>
-            <button mat-menu-item>Make a copy</button>
-        </mat-menu>
+        <div>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item (click)="onClickTrash()">Delete Note</button>
+                <button mat-menu-item>Add Label</button>
+                <button mat-menu-item>Add drawing</button>
+                <button mat-menu-item>Make a copy</button>
+            </mat-menu>
+        </div>
     </div>
     <div *ngIf="isTrash" fxLayout="row" fxLayourAlign="space-between start">
         <img class="icons" src="../../../assets/delete_forever.svg" matTooltip="Delete forever">

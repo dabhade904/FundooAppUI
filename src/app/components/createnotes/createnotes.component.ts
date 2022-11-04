@@ -20,7 +20,7 @@ export class CreatenotesComponent implements OnInit {
     this.createNote = this.formBuilder.group({
       title: ['', Validators.required],
       discription: ['', Validators.required],
-      color:""
+      color:" "
     });
   }
   isShow() {
