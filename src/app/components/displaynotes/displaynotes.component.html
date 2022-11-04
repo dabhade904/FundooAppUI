@@ -1,14 +1,16 @@
 <div fxLayout="row wrap" fxLayoutAlign="" class="main-div" style="width:auto;">
-    <mat-card *ngFor="let note of GetNote">
-        <div fxLayout="row" fxLayoutAlign="" class="pin-text">
-            <textarea name="text" id="text" class="note-section" placeholder="Title"
-                (click)="openDialog(note)">{{note.title}}</textarea>
-            <img src="../../../assets/pin.svg" alt="">
-        </div>
-        <textarea name="text" id="text" class="note-section" placeholder="Take a note..."
-            (click)="openDialog(note)">{{note.discription}}</textarea>
-        <div fxLayout="row" fxLayoutAlign="space-between end">
-            <app-icons [noteCard]="note"></app-icons>
-        </div>
-    </mat-card>
+    <div *ngFor="let note of GetNote">
+        <mat-card  [style.background]="note.color">
+            <div fxLayout="row" fxLayoutAlign="" class="pin-text">
+                <textarea name="text" id="text" class="note-section" placeholder="Title"
+                    (click)="openDialog(note)">{{note.title}}</textarea>
+                <img src="../../../assets/pin.svg" alt="">
+            </div>
+            <textarea name="text" id="text" class="note-section" placeholder="Take a note..."
+                (click)="openDialog(note)">{{note.discription}}</textarea>
+            <div fxLayout="row" fxLayoutAlign="space-between end">
+                <app-icons [noteCard]="note"></app-icons>
+            </div>
+        </mat-card>
+    </div>
 </div>
