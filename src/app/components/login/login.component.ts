@@ -10,12 +10,14 @@ import { UserServiceService } from 'src/app/services/userService/user-service.se
 export class LoginComponent implements OnInit {
   login !: FormGroup;
   submitted = false;
-  constructor(private formBuilder: FormBuilder, private user: UserServiceService) { }
+  user='1'
+  constructor(private formBuilder: FormBuilder, private userService: UserServiceService) { }
   ngOnInit() {
     this.login = this.formBuilder.group({
       emailId: ['', Validators.required],
       password: ['', [Validators.required, Validators.minLength(8)]]
     })
+    localStorage.setItem('SeesionUser',this.user)  
   }
   onSubmit() {
     this.submitted = true;
@@ -25,7 +27,7 @@ export class LoginComponent implements OnInit {
         emailId: this.login.value.emailId,
         password: this.login.value.password
       }
-      this.user.login(data).subscribe((Response: any) => {
+      this.userService.login(data).subscribe((Response: any) => {
         console.log('responce :=>', Response.tokan);
         localStorage.setItem('tokan', Response.tokan)
       })

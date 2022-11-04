@@ -31,6 +31,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import { UpdateComponent } from './components/update/update.component'; 
 import { MatDialogModule } from '@angular/material/dialog';
 import {MatMenuModule} from '@angular/material/menu'; 
+import { AuthguardServiceService } from './services/authguardService/authguard-service.service';
+import {Routes, RouterModule } from '@angular/router';  
 @NgModule({
   declarations: [
     AppComponent,
@@ -65,7 +67,7 @@ import {MatMenuModule} from '@angular/material/menu';
     MatDialogModule,FormsModule,
     MatCardModule,MatTooltipModule,MatMenuModule
   ],
-  providers: [],
+  providers: [AuthguardServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
