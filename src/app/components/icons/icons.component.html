@@ -4,7 +4,6 @@
         <img *ngIf="!isTrash" src="../../../assets/person.svg" matTooltip="Collaborator">
         <img *ngIf="!isTrash" [matMenuTriggerFor]="color" mat-button src="../../../assets/palette.svg"
             matTooltip="Background options">
-
         <mat-menu #color="matMenu" yPosition="below">
             <div *ngFor="let color of colorArray" fxLayout="row row wrap" fxLayourAlign="center" class="button-clr">
                 <button mat-mini-fab [style.background-color]="color?.colorCode"
@@ -18,7 +17,7 @@
             matTooltip="UnArchive">
     </div>
     <div>
-        <img *ngIf="!isTrash" [matMenuTriggerFor]="menu" src="../../../assets/more.svg">
+        <img *ngIf="!isTrash" [matMenuTriggerFor]="menu" src="../../../assets/more.svg" matTooltip="more">
         <mat-menu #menu="matMenu">
             <button mat-menu-item (click)="onClickTrash()">Delete Note</button>
             <button mat-menu-item>Add Label</button>

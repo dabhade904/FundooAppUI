@@ -1,4 +1,4 @@
-import { Component, Inject, Input, OnInit } from '@angular/core';
+import { Component, Inject, Input, OnInit, EventEmitter } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { NoteService } from 'src/app/services/noteService/note.service';
 
@@ -11,6 +11,9 @@ export class UpdateComponent implements OnInit {
   title: any;
   description: any;
   noteId: any;
+  color: any;
+  @Input() getColor :any;
+  // @Output() parentComponent = new EventEmitter<any>();
   constructor(private note: NoteService, public dailogRef: MatDialogRef<UpdateComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any
   ) { }
@@ -20,16 +23,18 @@ export class UpdateComponent implements OnInit {
     this.title = this.data.title;
     this.description = this.data.discription;
     this.noteId = this.data.noteID;
+    this.color = this.data.color
   }
 
   onNoClick() {
     let data = {
       title: this.title,
       discription: this.description,
+      color: this.color,
     }
     this.note.updateNotes(data, this.noteId).subscribe((res: any) => {
       console.log(res);
-      console.log(this.title, "------> ", this.description,' note id----> ',this.noteId);
+      this.getColor.emit(res);
     });
     this.dailogRef.close();
   }

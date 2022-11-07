@@ -9,7 +9,7 @@ import { EventEmitter } from '@angular/core';
 })
 export class CreatenotesComponent implements OnInit {
   @Output() messageEvent = new EventEmitter<any>();
-  //@Input() GetNote: any;
+  @Input() ColorNote: any;
   show = false;
   createNote!: FormGroup;
   panelOpenState = false;

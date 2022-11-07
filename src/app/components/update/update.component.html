@@ -1,8 +1,10 @@
 <div fxLayout="column" fxLayoutAlign="center center" class="main-div" >
-    <textarea name="" id="" class="note-section" placeholder="Title"[(ngModel)]="title"></textarea>
-    <textarea name="" id="" class="note-section" placeholder="Take a note..." [(ngModel)]="description"></textarea>
-    <div fxLayout="row" fxLayoutAlign="space-around end">
-        <app-icons></app-icons>
-        <button mat-button class="btn-close" (click)="onNoClick()">Close</button>
+    <div *ngFor="let noteColor of getColor">
+        <textarea name="" id="" class="note-section" placeholder="Title" [(ngModel)]="title" [style.background]="noteColor.color"></textarea>
+        <textarea name="" id="" class="note-section" placeholder="Take a note..." [(ngModel)]="description"></textarea>
+        <div fxLayout="row" fxLayoutAlign="space-around end">
+            <app-icons></app-icons>
+            <button mat-button class="btn-close" (click)="onNoClick()">Close</button>
+        </div>
     </div>
 </div>

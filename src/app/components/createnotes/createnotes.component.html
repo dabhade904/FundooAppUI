@@ -1,6 +1,6 @@
 <form action="" [formGroup]="createNote" (ngSubmit)="onSubmit()">
-    <div fxLayout="column" fxLayoutAlign="start center" class="main-div">
-        <mat-card>
+    <div fxLayout="column" fxLayoutAlign="start center" class="main-div" >
+        <mat-card >
             <div fxLayout="row" fxLayoutAlign="none end" *ngIf="show" class="title-section">
                 <input name="text" id="text" class="note-section" placeholder="Title" formControlName="title"
                     type="text">

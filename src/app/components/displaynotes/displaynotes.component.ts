@@ -9,9 +9,9 @@ import { UpdateComponent } from '../update/update.component';
 })
 export class DisplaynotesComponent {
   @Input() GetNote: any;
-  @Output() changeNoteEvent = new EventEmitter<string>();
-  @Output() updatedisplay = new EventEmitter<string>();
-  @Output() messageEvent = new EventEmitter<string>();
+  @Output() changeNoteEvent = new EventEmitter<any>();
+  @Output() updatedisplay = new EventEmitter<any>();
+  @Output() messageEvent = new EventEmitter<any>();
 
   constructor(private dialog: MatDialog) { }
 

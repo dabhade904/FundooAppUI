@@ -3,6 +3,7 @@ import { NoteService } from 'src/app/services/noteService/note.service';
 import { ActivatedRoute } from '@angular/router';
 import { TrashComponent } from '../trash/trash.component';
 import { EventEmitter } from '@angular/core';
+import { ArchiveComponent } from '../archive/archive.component';
 @Component({
   selector: 'app-icons',
   templateUrl: './icons.component.html',
@@ -16,26 +17,26 @@ export class IconsComponent implements OnInit {
   isTrash: boolean = false;
   constructor(private note: NoteService, private activatedroute: ActivatedRoute) { }
 
-  colorArray =[{colorCode:"maroon"},
-  {colorCode:"silver"},
-  {colorCode:"Yellow"},
-  {colorCode:"Purple"},
-  {colorCode:"pink"},
-  {colorCode:"chocolate"},
-  {colorCode:"Wheat"},
-  {colorCode:"indigo"},
-  {colorCode:"hotpink"},
-  {colorCode:"lightblue"},
-  {colorCode:"green"},
-  {colorCode:"olive"}];
+  colorArray = [{ colorCode: "maroon" },
+  { colorCode: "silver" },
+  { colorCode: "Yellow" },
+  { colorCode: "Purple" },
+  { colorCode: "pink" },
+  { colorCode: "chocolate" },
+  { colorCode: "Wheat" },
+  { colorCode: "indigo" },
+  { colorCode: "hotpink" },
+  { colorCode: "lightblue" },
+  { colorCode: "green" },
+  { colorCode: "olive" }];
   noteListId: any;
-  
+
   ngOnInit(): void {
     let Component = this.activatedroute.snapshot.component;
     if (Component == TrashComponent) {
       this.isTrash = true;
     }
-    if (Component == TrashComponent) {
+    if (Component == ArchiveComponent) {
       this.isArchive = true;
     }
   }
@@ -46,7 +47,8 @@ export class IconsComponent implements OnInit {
     console.log(reqdata);
     this.note.archiveNote(reqdata).subscribe((response: any) => {
       console.log(response);
-      window.location.reload();
+      //this.changeNoteEvent.emit(response);
+       window.location.reload();
     })
   }
   onClickTrash() {
@@ -54,8 +56,9 @@ export class IconsComponent implements OnInit {
       noteID: this.noteCard.noteID
     }
     console.log(data);
-    this.note.trashNote(data).subscribe((Response: any) => {
+    this.note.trashNote(data).subscribe((response: any) => {
       console.log(Response);
+      // this.changeNoteEvent.emit(response);
       window.location.reload();
     })
   }
@@ -65,6 +68,7 @@ export class IconsComponent implements OnInit {
     }
     this.note.archiveNote(reqdata).subscribe((response: any) => {
       console.log(response);
+      // this.changeNoteEvent.emit(response);
       window.location.reload();
     })
   }
@@ -76,21 +80,21 @@ export class IconsComponent implements OnInit {
     this.note.trashNote(reqdata).subscribe((response: any) => {
       console.log(response);
       window.location.reload();
-
+      // this.changeNoteEvent.emit(response);
     })
   }
   applyColor(color: any) {
     this.noteListId = this.noteCard.color = color;
     let reqData = {
       color: color,
-      noteID:this.noteCard.noteID,      
+      noteID: this.noteCard.noteID,
     };
     this.note.noteColor(reqData).subscribe((response: any) => {
       console.log(response);
       this.changeNoteEvent.emit(response);
-      console.log("color", reqData)
+      // window.location.reload();
     })
-  }   
+  }
 }
 
 
