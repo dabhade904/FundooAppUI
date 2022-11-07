@@ -1,3 +1,4 @@
 <app-createnotes (messageEvent)=" receiveMessage($event)"></app-createnotes>
 <app-displaynotes [GetNote]="noteArray" (updatedisplay)="updatedIcon($event)"
     (displayArchive)="receiveMessageArchive($event)" (changeNoteEvent)="iconRefresh($event)"></app-displaynotes>
+    

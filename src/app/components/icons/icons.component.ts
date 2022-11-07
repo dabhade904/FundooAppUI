@@ -16,18 +16,18 @@ export class IconsComponent implements OnInit {
   isTrash: boolean = false;
   constructor(private note: NoteService, private activatedroute: ActivatedRoute) { }
 
-  colorArray =[{colorCode:"rgb(153, 0, 51)"},
-  {colorCode:"rgb(102, 255, 102)"},
-  {colorCode:"rgb(51, 102, 204)"},
-  {colorCode:"rgb(0, 255, 255)"},
-  {colorCode:"rgb(255, 0, 255)"},
-  {colorCode:"rgb(255, 51, 0)"},
-  {colorCode:"rgb(0, 51, 0)"},
-  {colorCode:"rgb(255, 255, 0)"},
-  {colorCode:"rgb(255, 140, 26)"},
-  {colorCode:"rgb(102, 204, 255)"},
-  {colorCode:"rgb(38,30,238)"},
-  {colorCode:"rgb(51, 153, 102)"}];
+  colorArray =[{colorCode:"maroon"},
+  {colorCode:"silver"},
+  {colorCode:"Yellow"},
+  {colorCode:"Purple"},
+  {colorCode:"pink"},
+  {colorCode:"chocolate"},
+  {colorCode:"Wheat"},
+  {colorCode:"indigo"},
+  {colorCode:"hotpink"},
+  {colorCode:"lightblue"},
+  {colorCode:"green"},
+  {colorCode:"olive"}];
   noteListId: any;
   
   ngOnInit(): void {
@@ -41,7 +41,7 @@ export class IconsComponent implements OnInit {
   }
   onClickArchive() {
     let reqdata = {
-      noteID: [this.noteCard.noteID]
+      noteID: this.noteCard.noteID
     }
     console.log(reqdata);
     this.note.archiveNote(reqdata).subscribe((response: any) => {
@@ -51,7 +51,7 @@ export class IconsComponent implements OnInit {
   }
   onClickTrash() {
     let data = {
-      noteID: [this.noteCard.noteID]
+      noteID: this.noteCard.noteID
     }
     console.log(data);
     this.note.trashNote(data).subscribe((Response: any) => {
@@ -61,7 +61,7 @@ export class IconsComponent implements OnInit {
   }
   onUnArchievenote() {
     let reqdata = {
-      noteID: [this.noteCard.noteID],
+      noteID: this.noteCard.noteID,
     }
     this.note.archiveNote(reqdata).subscribe((response: any) => {
       console.log(response);
@@ -70,7 +70,7 @@ export class IconsComponent implements OnInit {
   }
   onRestore() {
     let reqdata = {
-      noteID: [this.noteCard.noteID],
+      noteID: this.noteCard.noteID,
       isTrash: false,
     }
     this.note.trashNote(reqdata).subscribe((response: any) => {
@@ -83,7 +83,7 @@ export class IconsComponent implements OnInit {
     this.noteListId = this.noteCard.color = color;
     let reqData = {
       color: color,
-      noteID: [this.noteCard.noteID],      
+      noteID:this.noteCard.noteID,      
     };
     this.note.noteColor(reqData).subscribe((response: any) => {
       console.log(response);

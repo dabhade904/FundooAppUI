@@ -6,11 +6,9 @@
             matTooltip="Background options">
 
         <mat-menu #color="matMenu" yPosition="below">
-            <div>
-                <div *ngFor="let color of colorArray">
-                    <button mat-mini-fab [style.background-color]="color?.colorCode"
-                        (click)="applyColor(color?.colorCode)"></button>
-                </div>
+            <div *ngFor="let color of colorArray" fxLayout="row row wrap" fxLayourAlign="center" class="button-clr">
+                <button mat-mini-fab [style.background-color]="color?.colorCode"
+                    (click)="applyColor(color?.colorCode)"></button>
             </div>
         </mat-menu>
         <img *ngIf="!isTrash" src="../../../assets/image.svg" matTooltip="Add image">
@@ -21,12 +19,12 @@
     </div>
     <div>
         <img *ngIf="!isTrash" [matMenuTriggerFor]="menu" src="../../../assets/more.svg">
-            <mat-menu #menu="matMenu">
-                <button mat-menu-item (click)="onClickTrash()">Delete Note</button>
-                <button mat-menu-item>Add Label</button>
-                <button mat-menu-item>Add drawing</button>
-                <button mat-menu-item>Make a copy</button>
-            </mat-menu>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="onClickTrash()">Delete Note</button>
+            <button mat-menu-item>Add Label</button>
+            <button mat-menu-item>Add drawing</button>
+            <button mat-menu-item>Make a copy</button>
+        </mat-menu>
     </div>
     <div *ngIf="isTrash" fxLayout="row" fxLayourAlign="space-between start">
         <img class="icons" src="../../../assets/delete_forever.svg" matTooltip="Delete forever">
