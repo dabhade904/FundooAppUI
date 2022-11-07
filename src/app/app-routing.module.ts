@@ -14,14 +14,14 @@ import { TrashComponent } from './components/trash/trash.component';
 import { AuthenticationGuard } from './services/authguardService/authentication.guard';
 
 const routes: Routes = [
-  { path: '', redirectTo: "/login", pathMatch: 'full' },
+  //  { path: '', redirectTo: "/login", pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
-  { path: 'dashboard', component: DashboardComponent },
+  // { path: 'dashboard', component: DashboardComponent },
   { path: 'registration', component: RegisterComponent },
   { path: 'forgetpassword', component: ForgetPasswordComponent },
   { path: 'resetpassword', component: ResetPasswordComponent },
   {
-    path: 'dashboard', component: DashboardComponent,canActivate:[AuthenticationGuard],
+    path: 'dashboard', component: DashboardComponent,canActivate: [AuthenticationGuard],
     children: [
       { path: 'getnotes', component: GetNotesComponent },
       { path: 'archiveNotes', component: ArchiveComponent },

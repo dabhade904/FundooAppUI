@@ -41,7 +41,7 @@ export class CreatenotesComponent implements OnInit {
         console.log(response);
         this.messageEvent.emit(response)
       })
-      // this.resetForm();
+      this.resetForm();
     } else {
       console.log("Invalid Data", this.createNote.value);
       console.log("no api call")

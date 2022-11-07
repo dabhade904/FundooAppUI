@@ -69,7 +69,7 @@ export class NoteService {
   noteColor(reqdata:any){
 
     console.log(this.tokan);
-    console.log('ttttttttttttttt------>  ',reqdata.noteID);
+    console.log(' ',reqdata);
     
     let header={
       headers: new HttpHeaders({
@@ -77,6 +77,7 @@ export class NoteService {
         'Authorization':'Bearer '+this.tokan
       })
     }
-    return this.httpService.putService(`https://localhost:44308/api/Note/ColorNotes?noteId=${reqdata.noteID}&color=${reqdata.color}`, reqdata, true, header)
+    return this.httpService.postService(`https://localhost:44308/api/Note/ColorNotes?noteId=${reqdata.noteID}&color=${reqdata.color}`,{}, true, header)
   }
 }
+// https://localhost:44308/api/Note/ColorNotes?noteId=2&color=pink
